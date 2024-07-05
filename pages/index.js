@@ -1,5 +1,7 @@
+import { useState } from 'react'
+
 function Home() {
-    return <div>Home</div>
+    return <div>Sandbox</div>
 }
 
 export default Home
