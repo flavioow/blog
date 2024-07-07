@@ -3,7 +3,7 @@
 html, body {
     font-family: var(--typo-sans);
     font-weight: var(--typo-height);
-    font-size: 100%;
+    font-size: 1rem;
     background-color: var(--theme-background);
     color: var(--theme-text);
     transition: var(--time-m) ease-in-out;
@@ -20,11 +20,12 @@ html, body {
 
 h1, h2, h3, h4, h5 { font-weight: 700; }
 code, pre { font-family: var(--typo-mono); }
-h1 { font-size: 5.652rem; line-height: 9.000rem; }
-h2 { font-size: 3.997rem; line-height: 6.000rem; }
-h3 { font-size: 2.827rem; line-height: 4.245rem; }
-h4 { font-size: 1.999rem; line-height: 3.000rem; }
-h5 { font-size: 1.414rem; line-height: 2.115rem; }
+h1 { font-size: 5.652rem; line-height: 9.000rem; letter-spacing: 2px; }
+h2 { font-size: 3.997rem; line-height: 6.000rem; letter-spacing: 1px; }
+h3 { font-size: 2.827rem; line-height: 4.245rem; letter-spacing: .6px; }
+h4 { font-size: 1.999rem; line-height: 3.000rem; letter-spacing: .4px; }
+h5 { font-size: 1.414rem; line-height: 2.115rem; letter-spacing: .2px; }
+p { font-size: 1.122rem; line-height: 1.650rem; letter-spacing: .2px; word-spacing: 2px; }
 small { font-size: 0.707rem; line-height: 1.065rem; }
 
 ::selection {

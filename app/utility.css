@@ -1,0 +1,124 @@
+/* Display */
+.none {
+    display: none;
+}
+
+.block {
+    display: block;
+}
+
+.inline {
+    display: inline;
+}
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+/* Align */
+.justify-start {
+    justify-content: start;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-end {
+    justify-content: end;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-around {
+    justify-content: space-around;
+}
+
+.justify-evenly {
+    justify-content: space-evenly;
+}
+
+.align-start {
+    align-items: start;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.align-end {
+    align-items: end;
+}
+
+.align-baseline {
+    align-items: baseline;
+}
+
+/* Grid */
+.grid-center {
+    display: grid;
+    place-items: center;
+}
+
+.grid-layout {
+    --layout-padding: 2rem;
+    --layout-content-max: 80ch;
+    --layout-breakout-max: 120ch;
+    --layout-breakout-size: calc((var(--layout-breakout-max) - var(--layout-content-max)) / 2);
+
+    display: grid;
+    grid-template-columns:
+        [full-start] minmax(var(--layout-padding), 1fr)
+        [breakout-start] minmax(0, var(--layout-breakout-size))
+        [content-start] min(100% - (var(--layout-padding) * 2), var(--layout-content-max)) [content-end]
+        minmax(0, var(--layout-breakout-size)) [breakout-end]
+        minmax(var(--layout-padding), 1fr) [full-end];
+
+    & > :not(.breakout, .full),
+    .full > :not(.breakout, .full) {
+        grid-column: content;
+    }
+
+    & > .breakout {
+        grid-column: breakout;
+    }
+
+    & > .full {
+        grid-column: full;
+        display: grid;
+        grid-template-columns: inherit;
+    }
+
+    .blog-content p {
+        text-indent: 2rem;
+        text-align: justify;
+    }
+
+    .blog-content :where(h1, h2, h3, h4, h5, small, p) + p:not(:last-child) {
+        margin: 1.5rem 0;
+    }
+
+    .blog-content :where(h1, h2, h3, h4, h5) + :where(h1, h2, h3, h4, h5):not(:last-child) {
+        margin: 1rem 0;
+    }
+}
+
+/* Background */
+
+.bg-primary {
+    background-color: var(--theme-primary);
+}
+
+.bg-secondary {
+    background-color: var(--theme-secondary);
+}
+
+.bg-accent {
+    background-color: var(--theme-accent);
+}

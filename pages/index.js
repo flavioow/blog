@@ -3,7 +3,7 @@ import Header from '../app/layouts/Header/index'
 
 function Home() {
     return (
-        <div>
+        <div className='App'>
             <Header />
         </div>
     )

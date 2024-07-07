@@ -2,7 +2,11 @@ import React from 'react'
 import './Header.css'
 
 const Header = () => {
-    return
+    return (
+        <header className='bg-secondary'>
+            
+        </header>
+    )
 }
 
 export default Header
