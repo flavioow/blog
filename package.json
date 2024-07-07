@@ -4,21 +4,28 @@
     "main": "index.js",
     "scripts": {
         "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
         "lint": "eslint .",
-        "format": "prettier --write .npm install husky --save-dev
-"
+        "format": "prettier --write .",
+        "prepare": "husky install"
     },
     "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "description": "",
+    "author": "Flavio Henrique",
+    "license": "MIT",
+    "description": "Flavio Henrique's Blog",
     "dependencies": {
-        "next": "^14.2.4",
-        "react": "^18.3.1",
-        "react-dom": "^18.3.1"
+        "next": "latest",
+        "react": "latest",
+        "react-dom": "latest"
     },
     "devDependencies": {
-        "eslint": "^9.6.0",
-        "prettier": "^3.3.2"
+        "eslint": "latest",
+        "eslint-config-prettier": "latest",
+        "eslint-plugin-prettier": "latest",
+        "prettier": "latest",
+        "husky": "latest",
+        "@typescript-eslint/eslint-plugin": "latest",
+        "@typescript-eslint/parser": "latest"
     }
 }
