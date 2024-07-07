@@ -122,3 +122,8 @@
 .bg-accent {
     background-color: var(--theme-accent);
 }
+
+.bg-text {
+    background-color: var(--theme-text);
+    color: var(--theme-background);
+}

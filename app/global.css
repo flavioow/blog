@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-html, body {
+html, body, .App {
     font-family: var(--typo-sans);
     font-weight: var(--typo-height);
     font-size: 1rem;
