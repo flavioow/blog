@@ -1,7 +1,12 @@
 // import Link from 'next/link'
+import Header from '../app/layouts/Header/index'
 
 function Home() {
-    return
+    return (
+        <div>
+            <Header />
+        </div>
+    )
 }
 
 export default Home
