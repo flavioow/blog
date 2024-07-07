@@ -1,5 +1,5 @@
 // import Link from 'next/link'
-import Header from '../app/layouts/Header/index'
+import Header from '../app/layouts/header/index'
 
 function Home() {
     return (
