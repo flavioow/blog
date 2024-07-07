@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+html, body {
+    font-family: var(--typo-sans);
+    font-weight: var(--typo-height);
+    font-size: 100%;
+    background-color: var(--theme-background);
+    color: var(--theme-text);
+    transition: var(--time-m) ease-in-out;
+    transition-property: background, opacity;
+    width: 100vw;
+    min-height: 100dvh;
+    overflow-x: hidden;
+    opacity: 1;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+h1, h2, h3, h4, h5 { font-weight: 700; }
+code, pre { font-family: var(--typo-mono); }
+h1 { font-size: 5.652rem; line-height: 9.000rem; }
+h2 { font-size: 3.997rem; line-height: 6.000rem; }
+h3 { font-size: 2.827rem; line-height: 4.245rem; }
+h4 { font-size: 1.999rem; line-height: 3.000rem; }
+h5 { font-size: 1.414rem; line-height: 2.115rem; }
+small { font-size: 0.707rem; line-height: 1.065rem; }
+
+::selection {
+    background-color: var(--theme-accent);
+    color: var(--theme-background);
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

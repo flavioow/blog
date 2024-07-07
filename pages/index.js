@@ -1,5 +1,7 @@
+// import Link from 'next/link'
+
 function Home() {
-    return <div>Home</div>
+    return
 }
 
 export default Home
