@@ -1,0 +1,15 @@
+{
+    "short_name": "flaviosblog",
+    "name": "Flavio Henrique's Blog",
+    "icons": [
+        {
+            "src": "shortcut.png",
+            "sizes": "64x64",
+            "type": "image/png"
+        }
+    ],
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "#f28",
+    "background_color": "#f28"
+}
