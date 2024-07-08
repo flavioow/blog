@@ -3,9 +3,9 @@
     "name": "Flavio Henrique's Blog",
     "icons": [
         {
-            "src": "shortcut.png",
-            "sizes": "64x64",
-            "type": "image/png"
+            "src": "./favicon.svg",
+            "sizes": "64x64 32x32 24x24 16x16",
+            "type": "image/x-icon"
         }
     ],
     "start_url": ".",
