@@ -1,28 +1,33 @@
-import React, { act } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import styles from './button.module.css'
 
-let action = (props) => {
+const action = (props) => {
     switch (props.action) {
         case 'redirect':
-            redirect()
+            redirect(props.param)
             break
-        case 'toogle':
-            toogle()
+        case 'toggle':
+            toggle(props.param)
             break
         case 'submit':
-            submit()
+            submit(props.param)
             break
+        case 'refresh':
+            refresh(props.param)
+            break
+        default:
+            console.warn('Action not recognized')
     }
 }
 
-let redirect = (props) => {
-    if (props.param.url) {
-        if (props.param.blank) {
-            window.open(props.param.url, props.param.blank)
+const redirect = (param) => {
+    if (param.url) {
+        if (param.blank) {
+            window.open(param.url, param.blank)
         }
         else {
-            window.open(props.param.url)
+            window.open(param.url)
         }
     }
     else {
@@ -30,36 +35,70 @@ let redirect = (props) => {
     }
 }
 
-let toogle = (props) => {
-    let target = props.param.target
-    let value = props.param.value || 'disable'
-    target.classList.toogle(`${value}`)
+const toggle = (param) => {
+    let target = document.querySelector(param.target)
+    let value = param.value || 'disable'
+    if (target) {
+        target.classList.toggle(value)
+    } else {
+        console.warn('<param.target> must be provided and exist in DOM')
+    }
 }
 
-let submit = (props) => {
-    
+const submit = (param) => {
+    let target = param.target
+    fetch(target, {
+        method: param.method || 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify(param.data || param.content)
+    })
+}
+
+const refresh = (param) => {
+    let target = param.target || 'window'
+    if (!target || target === 'window') {
+        window.location.reload()
+    }
+    else {
+        let refreshElement = document.querySelector(target)
+        if (refreshElement) {
+            let children = [...refreshElement.childNodes]
+            refreshElement.replaceChildren(...children)
+        }
+        else {
+            console.warn('<param.target> must be provided and exist in DOM')
+        }
+    }
 }
 
 const Button = (props) => {
+    const handleClick = () => {
+        action(props)
+    }
+
     return (
         <button
-            className = {`Button button-${props.type} ${props.className}`}
-            action = {props.action}
-            param = {props.param}
+            className={`Button button-${props.type} ${props.className}`}
+            onClick={handleClick}
         >
-            <div className='buttonIcon'>{props.icon}</div>
-            <div className='buttonLabel'>{props.label}</div>
+            {props.icon && <div className='buttonIcon'>{props.icon}</div>}
+            {props.label && <div className='buttonLabel'>{props.label}</div>}
         </button>
     )
 }
 
-export default Button
+Button.propTypes = {
+    action: PropTypes.string.isRequired,
+    param: PropTypes.object.isRequired,
+    type: PropTypes.oneOf(['primary', 'secondary', 'success', 'error','warning']),
+    className: PropTypes.string,
+    icon: PropTypes.node,
+    label: PropTypes.string
+}
 
-/*
-    { label, icon, type, action, param = { origin, destination, conditional, handler }, className }
-    1. label
-    2. icon
-    3. type
-    5. action
-    6. param: origin, destination, conditional, handler
-*/
+Button.defaultProps = {
+    type: 'secondary',
+    className: ''
+}
+
+export default Button
