@@ -1,0 +1,13 @@
+.Link {
+	color: var(--theme-accent);
+	text-decoration: underline var(--theme-accent);
+	
+	cursor: pointer;
+
+	transition: all var(--time-xs) ease-in-out;
+	
+	&:hover {
+		color: color-mix(in srgb, var(--theme-accent) 50%, var(--theme-background));
+		text-decoration: underline color-mix(in srgb, var(--theme-accent) 50%, var(--theme-background));
+	}
+}
