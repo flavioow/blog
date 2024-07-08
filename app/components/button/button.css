@@ -17,7 +17,7 @@
 	cursor: pointer;
 	user-select: none;
 
-	transition: all var(--time-s) ease-in-out;
+	transition: all var(--time-xs) ease-in-out;
 
 	&:hover {
 		transform: translateY(-.15rem);

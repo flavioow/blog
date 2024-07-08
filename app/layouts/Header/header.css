@@ -1,0 +1,52 @@
+.Header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+
+	padding: 1rem;
+
+	background-color: var(--theme-background);
+}
+
+.Header + * {
+	margin-top: 100px;
+}
+
+.Header :where(ol, ul) {
+	display: flex;
+	justify-content: space-between;
+	gap: 1rem;
+}
+
+.Header :where(ol, ul) li {
+	list-style: none;
+}
+
+.Header .Button {
+	background-color: transparent;
+
+	border-radius: 0;
+	border-bottom: .3rem solid transparent;
+
+	padding-right: .5rem;
+	padding-left: .5rem;
+
+	* {
+		color: color-mix(in srgb, var(--theme-text) 50%, transparent);
+	}
+	
+	&:hover {
+		border-bottom: .3rem solid color-mix(in srgb, var(--theme-text) 50%, transparent);
+		box-shadow: none;
+		transform: translate(0);
+	}
+}
+
+.Header .Button.active {
+	border-bottom: .3rem solid var(--theme-text);
+
+	* {
+		color: var(--theme-text); 
+	}
+}
