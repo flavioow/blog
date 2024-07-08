@@ -33,4 +33,8 @@
     --time-m: 1s;
     --time-l: 1.3s;
     --time-xl: 1.6s;
+
+    --theme-success: #2dc164;
+    --theme-warning: #f0994b;
+    --theme-error: #f80759;
 }

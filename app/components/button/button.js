@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styles from './button.module.css'
+import './button.css'
 
 const action = (props) => {
     switch (props.action) {
@@ -78,7 +78,7 @@ const Button = (props) => {
 
     return (
         <button
-            className={`Button button-${props.type} ${props.className}`}
+            className={`Button button${props.type} ${props.className}`}
             onClick={handleClick}
         >
             {props.icon && <div className='buttonIcon'>{props.icon}</div>}
@@ -90,14 +90,14 @@ const Button = (props) => {
 Button.propTypes = {
     action: PropTypes.string.isRequired,
     param: PropTypes.object.isRequired,
-    type: PropTypes.oneOf(['primary', 'secondary', 'success', 'error','warning']),
+    type: PropTypes.oneOf(['Primary', 'Secondary', 'Success', 'Error','Warning']),
     className: PropTypes.string,
     icon: PropTypes.node,
     label: PropTypes.string
 }
 
 Button.defaultProps = {
-    type: 'secondary',
+    type: 'Secondary',
     className: ''
 }
 
