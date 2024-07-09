@@ -78,7 +78,7 @@ const Button = (props) => {
 
     return (
         <button
-            className={`Button button${props.type} ${props.className}`}
+            className={`Button button${props.type} clickable ${props.className}`}
             onClick={handleClick}
         >
             {props.icon && <div className='buttonIcon'>{props.icon}</div>}

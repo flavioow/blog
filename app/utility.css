@@ -127,3 +127,9 @@
     background-color: var(--theme-text);
     color: var(--theme-background);
 }
+
+/* Animation */
+.clickable:active {
+    transform: scale(0.85);
+    transition: transform var(--time-xs) ease-in-out;
+}
