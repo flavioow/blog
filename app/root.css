@@ -22,6 +22,8 @@
 }
 
 :root {
+    color-scheme: light dark;
+
     --typo-sans: 'Inter', Sans-Serif;
     --typo-serif: Serif;
     --typo-mono: 'JetBrains Mono', monospace;
