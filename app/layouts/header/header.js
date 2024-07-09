@@ -1,7 +1,7 @@
 import React from 'react'
 import Button from '~/components/button/'
 import './header.css'
-import Logo from '~/layouts/logo/'
+import Logo from '../../components/logo/'
 
 const Header = () => {
     return (

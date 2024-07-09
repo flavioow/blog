@@ -50,3 +50,8 @@
 		color: var(--theme-text); 
 	}
 }
+
+.Header :where(.logoContainer, .Logo) {
+	width: 2rem;
+	height: 3rem;
+}

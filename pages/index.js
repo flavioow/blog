@@ -1,26 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 
 /* Components */
 import Header from '../app/layouts/header/'
 
-/* Hooks */
-import useTitle from '../app/hooks/head/useTitle'
-import useFavicon from '../app/hooks/head/useFavicon'
 
-function Root() {
-    /* Use Hooks */
-    const [appName, setAppName] = useState('Site')
-
-    useTitle(appName)
-    useFavicon('%PUBLIC_URL%/./favicon.svg')
-
-    useEffect(() => {
-        fetch('/manifest.json')
-            .then(response => response.json())
-            .then(data => setAppName(data.short_name || 'My Portfolio'))
-            .catch(error => console.error('Error fetching manifest:', error))
-    }, [])
-
+function Index() {
     return (
         <div id='root'>
             <Header />
@@ -28,4 +12,4 @@ function Root() {
     )
 }
 
-export default Root
+export default Index

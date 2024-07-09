@@ -1,0 +1,8 @@
+.logoContainer {
+	display: grid;
+	place-items: center;
+}
+
+.logoPath {
+	fill: var(--theme-text);
+}
