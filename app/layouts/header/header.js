@@ -12,7 +12,7 @@ const Header = () => {
                 <div class="headerLinks">
                     <ul>
                         <li><Link href='./'>Example</Link></li>
-                        <li><Button label='Example' type='Basic' /></li>
+                        <li><Button label='Example' type='Basic' action='redirect' param={{url: './'}} /></li>
                     </ul>
                 </div>
             </div>
