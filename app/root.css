@@ -3,21 +3,21 @@
 
 @media (prefers-color-scheme: light) {
     :root {
-        --theme-text: #11100e;
-        --theme-background: #f1f0ee;
-        --theme-primary: #e7a20d;
-        --theme-secondary: #bcbeac;
-        --theme-accent: #a39b52;
+        --theme-text: #0d0e0b;
+        --theme-background: #f7f8f6;
+        --theme-primary: #9be70d;
+        --theme-secondary: #abbfb9;
+        --theme-accent: #6ca9ab;
     }
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --theme-text: #f2f1ef;
-        --theme-background: #100f0d;
-        --theme-primary: #f2ad18;
-        --theme-secondary: #505241;
-        --theme-accent: #aca45c;
+        --theme-text: #f2f3f0;
+        --theme-background: #070806;
+        --theme-primary: #a5f218;
+        --theme-secondary: #3f544d;
+        --theme-accent: #7d9c9d;
     }
 }
 

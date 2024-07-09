@@ -6,8 +6,6 @@ html, body, #root {
     font-size: 1rem;
     background-color: var(--theme-background);
     color: var(--theme-text);
-    transition: var(--time-m) ease-in-out;
-    transition-property: background, opacity;
     width: 100vw;
     min-height: 100dvh;
     overflow-x: hidden;

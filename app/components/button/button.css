@@ -8,7 +8,6 @@
 
 	background-color: transparent;
 	color: transparent;
-	font-weight: 500;
 
 	border: none;
 	outline: none;
@@ -41,7 +40,7 @@
 	}
 
 	&:hover {
-		box-shadow: 0 0 2.5rem -.5rem var(--theme-primary);
+		box-shadow: 0 0 5rem -.5rem var(--theme-primary);
 	}
 }
 
@@ -49,7 +48,7 @@
 	background-color: var(--theme-secondary);
 	
 	* {
-		color: var(--theme-background);
+		color: var(--theme-text);
 	}
 }
 
@@ -61,7 +60,7 @@
 	}
 
 	&:hover {
-		box-shadow: 0 0 2.5rem -.5rem var(--theme-accent);
+		box-shadow: 0 0 5rem -.5rem var(--theme-accent);
 	}
 }
 
@@ -73,7 +72,7 @@
 	}
 
 	&:hover {
-		box-shadow: 0 0 2.5rem -.5rem var(--theme-success);
+		box-shadow: 0 0 5rem -.5rem var(--theme-success);
 	}
 }
 
@@ -85,7 +84,7 @@
 	}
 
 	&:hover {
-		box-shadow: 0 0 2.5rem -.5rem var(--theme-error);
+		box-shadow: 0 0 5rem -.5rem var(--theme-error);
 	}
 }
 
@@ -97,7 +96,7 @@
 	}
 
 	&:hover {
-		box-shadow: 0 0 2.5rem -.5rem var(--theme-warning);
+		box-shadow: 0 0 5rem -.5rem var(--theme-warning);
 	}
 }
 
