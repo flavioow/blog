@@ -1,8 +1,17 @@
 .logoContainer {
 	display: grid;
 	place-items: center;
+	transition: all var(--time-xs) ease-in-out;
 }
 
 .logoPath {
 	fill: var(--theme-text);
+}
+
+.mask-rect {
+	transition: x var(--time-xs) ease-in-out;
+}
+
+.logoContainer:hover .mask-rect {
+	x: 0;
 }
