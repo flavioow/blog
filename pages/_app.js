@@ -14,7 +14,7 @@ function App({ Component, pageProps }) {
     const [appName, setAppName] = useState('Site')
 
     useTitle(appName)
-    useFavicon('%PUBLIC_URL%/./favicon.svg')
+    useFavicon('./favicon.svg')
 
     useEffect(() => {
         fetch('/manifest.json')
