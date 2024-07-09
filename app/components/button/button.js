@@ -27,7 +27,7 @@ const redirect = (param) => {
             window.open(param.url, param.blank)
         }
         else {
-            window.open(param.url)
+            window.location.href = param.url
         }
     }
     else {
