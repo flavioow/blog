@@ -1,5 +1,6 @@
 import React from 'react'
 import Button from '~/components/button/'
+import Link from '~/components/link/'
 import './header.css'
 import Logo from '../../components/logo/'
 
@@ -10,8 +11,8 @@ const Header = () => {
                 <Logo />
                 <div class="headerLinks">
                     <ul>
-                        <li><Button label='Example' className='active' /></li>
-                        <li><Button label='Example' type='Primary' /></li>
+                        <li><Link href='./'>Example</Link></li>
+                        <li><Button label='Example' type='Basic' /></li>
                     </ul>
                 </div>
             </div>
