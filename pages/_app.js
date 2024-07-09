@@ -17,7 +17,7 @@ function App({ Component, pageProps }) {
     useFavicon('./favicon.svg')
 
     useEffect(() => {
-        fetch('/manifest.json')
+        fetch('./manifest.json')
             .then(response => response.json())
             .then(data => setAppName(data.short_name || 'My Portfolio'))
             .catch(error => console.error('Error fetching manifest:', error))
