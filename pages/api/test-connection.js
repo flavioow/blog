@@ -10,8 +10,7 @@ export default async (req, res) => {
             const db = client.db('Cluster0')
             const collections = await db.listCollections().toArray()
             console.log('Collections fetched')
-            const collectionNames = collections.map(collection => collection.name)
-            res.status(200).json({ collections: collectionNames })
+            res.status(200).json({ collections: collections.map(collection => collection.name) })
         } catch (e) {
             console.error('Error connecting to database:', e)
             res.status(500).json({ error: 'Failed to connect to database' })
