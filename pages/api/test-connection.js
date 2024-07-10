@@ -6,6 +6,7 @@ export default async (req, res) => {
         const client = await clientPromise
         console.log('Connected to MongoDB')
         const db = client.db('Cluster0')
+        console.log('Selected database')
         const collections = await db.listCollections().toArray()
         console.log('Fetched collections')
         res.status(200).json({ collections })
