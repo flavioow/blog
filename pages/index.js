@@ -2,6 +2,7 @@ import React from 'react'
 
 /* Components */
 import Header from '../app/layouts/header/'
+import Latest from '../app/layouts/latest'
 import Button from '../app/components/button/'
 
 
@@ -9,6 +10,9 @@ function Index() {
     return (
         <div id='root'>
             <Header />
+            <div className='content grid-layout'>
+                <Latest/>
+            </div>
         </div>
     )
 }

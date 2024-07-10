@@ -68,8 +68,8 @@
 
 .grid-layout {
     --layout-padding: 2rem;
-    --layout-content-max: 80ch;
-    --layout-breakout-max: 120ch;
+    --layout-content-max: 120ch;
+    --layout-breakout-max: 150ch;
     --layout-breakout-size: calc((var(--layout-breakout-max) - var(--layout-content-max)) / 2);
 
     display: grid;

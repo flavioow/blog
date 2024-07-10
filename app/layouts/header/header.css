@@ -7,10 +7,11 @@
 	padding: 1rem;
 
 	background-color: var(--theme-background);
+	height: 80px;
 }
 
 .Header + * {
-	margin-top: 100px;
+	margin-top: 80px;
 }
 
 .Header :where(ol, ul) {

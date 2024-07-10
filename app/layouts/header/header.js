@@ -6,8 +6,8 @@ import Logo from '../../components/logo/'
 
 const Header = () => {
     return (
-        <header className='Header grid-layout'>
-            <div class="headerContent breakout flex justify-between">
+        <header className='Header grid-layout align-center'>
+            <div class="headerContent breakout flex justify-between align-center">
                 <Logo />
                 <div class="headerLinks">
                     <ul>
