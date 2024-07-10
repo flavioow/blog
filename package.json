@@ -17,6 +17,7 @@
     "dependencies": {
         "@ionic/react": "^8.2.5",
         "ionicons": "^7.4.0",
+        "mongodb": "^6.8.0",
         "next": "latest",
         "prop-types": "^15.8.1",
         "react": "latest",
