@@ -4,17 +4,17 @@ import { ObjectId } from 'mongodb'
 const User = {
     async findById(id) {
         const client = await clientPromise
-        return await client.db('your-db-name').collection('users').findOne({ _id: ObjectId(id) })
+        return await client.db('blog').collection('users').findOne({ _id: ObjectId(id) })
     },
 
     async findByEmail(email) {
         const client = await clientPromise
-        return await client.db('your-db-name').collection('users').findOne({ email })
+        return await client.db('blog').collection('users').findOne({ email })
     },
 
     async createUser(data) {
         const client = await clientPromise
-        const result = await client.db('your-db-name').collection('users').insertOne(data)
+        const result = await client.db('blog').collection('users').insertOne(data)
         return result.ops[0]
     },
 }

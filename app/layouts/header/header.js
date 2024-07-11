@@ -11,8 +11,8 @@ const Header = () => {
                 <Logo />
                 <div class="headerLinks">
                     <ul>
-                        <li><Link href='./'>Example</Link></li>
-                        <li><Button label='Example' type='Basic' action='redirect' param={{url: './'}} /></li>
+                        <li><Link href='./login'>Login</Link></li>
+                        <li><Button label='Get Started' type='Basic' action='redirect' param={{url: './register'}} /></li>
                     </ul>
                 </div>
             </div>

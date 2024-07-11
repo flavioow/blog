@@ -46,12 +46,12 @@ const toggle = (param) => {
 }
 
 const submit = (param) => {
-    let target = param.target
-    fetch(target, {
-        method: param.method || 'POST',
-        headers: { 'content-type': 'application/json' },
-        body: JSON.stringify(param.data || param.content)
-    })
+    let form = document.querySelector(param.form);
+    if (form) {
+        form.dispatchEvent(new Event('submit'));
+    } else {
+        console.warn('<param.form> must be provided and exist in DOM');
+    }
 }
 
 const refresh = (param) => {

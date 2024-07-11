@@ -5,7 +5,7 @@ import './latest.css'
 const Latest = () => {
 	return (
 		<div className='Latest'>
-			<Link href='https://youtube.com'  className='latestContainer grid'>
+			<Link href='./'  className='latestContainer grid'>
 				<div className='latestBanner flex justify-center align-center'>
 					<img className='latestImg' src='https://cdn-images-1.medium.com/max/250/1*Pym1Q3ZATveDLVE_PQwqwQ@2x.jpeg' />
 				</div>

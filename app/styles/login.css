@@ -1,0 +1,80 @@
+.formContainer {
+    height: 100dvh;
+
+    place-items: center;
+}
+
+.formArea {
+    grid-template-columns: 2fr 5fr;
+    gap: 2rem;
+
+    width: 80ch;
+}
+
+.formBanner {
+    background-color: color-mix(in srgb, var(--theme-text) 10%, var(--theme-background));
+
+    border-radius: 1rem 0 0 1rem;
+}
+
+.formContent {
+    text-align: center;
+
+    p {
+        color: color-mix(in srgb, var(--theme-text) 70%, var(--theme-background));
+    }
+}
+
+.formContent form {
+    margin-top: 3em;
+
+    & > div {
+        flex-direction: column;
+    }
+}
+
+.formContent :where(label, input) {
+    width: 100%;
+    text-align-last: left;
+}
+
+.formContent label {
+    margin-bottom: 1rem;
+}
+
+.formContent input {
+    border: none;
+    outline: none;
+    
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+
+    border-radius: .5rem;
+
+    background-color: color-mix(in srgb, var(--theme-text) 10%, var(--theme-background));
+}
+
+.formContainer .Button {
+    justify-content: center;
+}
+
+.formContainer aside {
+    margin-top: .5rem;
+    
+    & > * {
+        font-size: small;
+        color: color-mix(in srgb, var(--theme-text) 70%, var(--theme-background));
+    }
+
+    .asideLink {
+        color: var(--theme-primary);
+        text-decoration: none;
+        
+        transition: all var(--time-s) ease-in-out;
+
+        &:hover {
+            color: color-mix(in srgb, var(--theme-primary) 70%, var(--theme-background));
+            text-decoration: underline;
+        }
+    }
+}
