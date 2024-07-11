@@ -5,7 +5,7 @@
 	border-bottom: 1px solid var(--theme-border);
 	
 	a {
-		cursor: auto;
+		cursor: pointer;
 	}
 }
 
@@ -73,6 +73,7 @@
 	overflow: hidden;
 
 	cursor: default;
+    user-select: none;
 }
 
 .latestTag {
@@ -98,4 +99,16 @@
 		color-mix(in srgb, var(--theme-text) 30%, var(--theme-background)),
 		color-mix(in srgb, var(--theme-text) 50%, var(--theme-background))
 	);
+}
+
+.Latest :where(.latestTitle, .latestDescription, .latestTimePosted, .latestTimeRead) {
+	cursor: text;
+    user-select: text;
+}
+
+.Latest :where(.latestBanner, .latestBanner > *) {
+    pointer-events: none;
+
+    cursor: default;
+    user-select: none;
 }

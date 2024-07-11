@@ -7,7 +7,7 @@ const Latest = () => {
 		<div className='Latest'>
 			<Link href='./'  className='latestContainer grid'>
 				<div className='latestBanner flex justify-center align-center'>
-					<img className='latestImg' src='https://cdn-images-1.medium.com/max/250/1*Pym1Q3ZATveDLVE_PQwqwQ@2x.jpeg' />
+					<img className='latestImg' src='https://quinncreative.wordpress.com/wp-content/uploads/2014/07/lorem_ipsum_by_neosh.jpg' />
 				</div>
 				<div className='latestContent flex justify-between'>
 					<div>
