@@ -29,9 +29,9 @@ const Latest = () => {
 						</div>
 					</div>
 					<div>
-						<div className='latestData'>
-							<p className='latestTimePosted'>Há 4 min</p>
-							<p className='latestTimeRead'>3 min de leitura</p>
+						<div className='latestData flex'>
+							<p className='latestTimePosted'>4 min ago</p>
+							<p className='latestTimeRead'>3 min of reading</p>
 						</div>
 					</div>
 				</div>

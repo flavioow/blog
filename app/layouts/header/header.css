@@ -7,6 +7,9 @@
 	padding: 1rem;
 
 	background-color: var(--theme-background);
+
+    z-index: 1;
+
 	height: 80px;
 }
 

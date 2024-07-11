@@ -1,5 +1,5 @@
 .Latest {
-	padding: 2rem 0;
+	padding: 1rem 0;
 	margin: 2rem 0;
 	
 	border-bottom: 1px solid var(--theme-border);
@@ -10,13 +10,21 @@
 }
 
 .latestContainer {
-	grid-template-columns: 5fr 3fr;
+    grid-template-columns: 5fr 3fr;
+
+    padding: 1rem;
 	gap: 2rem;
+
+    transition: all var(--time-xs) ease-out;
 
 	&, & > * {
 		text-decoration: none;
 		color: var(--theme-text);
 	}
+
+    &:hover {
+        background-color: color-mix(in srgb, var(--theme-text) 10%, var(--theme-background));
+    }
 }
 
 .latestBanner {
@@ -91,8 +99,6 @@
 }
 
 .latestData {
-	display: flex;
-
 	gap: 2rem;
 
 	color: light-dark(

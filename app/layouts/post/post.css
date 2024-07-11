@@ -1,0 +1,115 @@
+.Post {
+    overflow: hidden;
+    
+	&, & > * {
+		text-decoration: none;
+		color: var(--theme-text);
+	}
+
+    & + &:not(:last-child), &:has(+ &) {
+        margin-bottom: 2rem;
+    }
+}
+
+.postContainer {
+    grid-template-columns: 3fr 7fr;
+    
+    padding: 1rem;
+    
+    transition: all var(--time-xs) ease-in-out;
+    
+    &:hover {
+        background-color: color-mix(in srgb, var(--theme-text) 10%, var(--theme-background));
+    }
+}
+
+.postBanner {
+    overflow: hidden;
+    position: relative;
+    
+	background-color: color-mix(in srgb, var(--theme-text) 10%, var(--theme-background));
+
+    height: 16em;
+
+	cursor: pointer;
+}
+
+.postBanner::after {
+    content: '';
+    background-image: linear-gradient(to right, transparent 50%, var(--theme-background) 100%);
+    
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    transition: all var(--time-xs) ease-in-out;
+    z-index: 0;
+}
+
+.postContainer:hover .postBanner::after {
+    background-image: linear-gradient(to right, transparent 50%, color-mix(in srgb, var(--theme-text) 10%, var(--theme-background)) 100%);
+}
+
+.postDescription {
+    color: light-dark(
+        color-mix(in srgb, var(--theme-text) 30%, var(--theme-background)),
+		color-mix(in srgb, var(--theme-text) 50%, var(--theme-background))
+    );
+        
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    
+    word-break: break-word;
+	hyphens: auto;
+	white-space: normal;
+	
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.postTags {
+	margin: 1rem 0;
+	
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	line-clamp: 1;
+	-webkit-box-orient: vertical;
+
+	word-break: break-word;
+	hyphens: auto;
+	white-space: normal;
+
+	text-overflow: clip;
+	overflow: hidden;
+
+	cursor: default;
+    user-select: none;
+}
+
+.postTag {
+	display: inline-block;
+
+	padding: .5rem;
+	margin: 0 .25rem;
+
+	text-transform: capitalize;
+	
+	border: 1px solid var(--theme-primary);
+	border-radius: 2rem;
+
+	color: var(--theme-primary);
+}
+
+.postData {
+	display: flex;
+
+	gap: 2rem;
+
+	color: light-dark(
+		color-mix(in srgb, var(--theme-text) 30%, var(--theme-background)),
+		color-mix(in srgb, var(--theme-text) 50%, var(--theme-background))
+	);
+}
