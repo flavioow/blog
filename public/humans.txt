@@ -24,4 +24,4 @@ CONTACT
  - birthdate: 28/04/2008 (DD/MM/YYYY)
  - email: flaviohps28@gmail.com
  - linkedin: https://www.linkedin.com/in/fl%C3%A1vio-henrique-perusin-de-souza-a51321315
- - Github: https://github.com/Fh-Shadow
+ - Github: https://github.com/flavioow
